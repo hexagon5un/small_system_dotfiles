@@ -1,5 +1,3 @@
-#
-# ~/.bash_profile
-#
+## Start is all here?
+. ~/.bashrc
 
-[[ -f ~/.bashrc ]] && . ~/.bashrc

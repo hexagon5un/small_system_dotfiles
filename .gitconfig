@@ -1,0 +1,106 @@
+[user]
+	name = Elliot Williams
+	email = elliot@pre.postero.us
+[core]
+	excludesfile = /home/elliot/.gitignore_global
+
+[color]
+   ui = auto
+#   branch = auto
+#   diff = auto
+#   status = auto
+[color "branch"]
+    current = yellow reverse
+    local = yellow
+    remote = green
+[color "diff"]
+    meta = yellow bold
+    frag = magenta bold
+    old = red bold
+    new = green bold
+[color "status"]
+    added = green bold
+    changed = yellow bold
+    untracked = red bold
+
+[alias]
+    st = status
+    ci = commit
+    cia = commit -a
+    br = branch
+    co = checkout
+    cob = checkout -b
+    ai = add -i
+
+    df = diff
+    ## Improvements on diff
+    dfc = diff --word-diff=color
+    dfw = diff --word-diff
+    dc = diff --cached
+    dfiles = diff --name-only
+
+    lg = log -p
+    lol = log --graph --decorate --pretty=oneline --abbrev-commit
+    lola = log --graph --decorate --pretty=oneline --abbrev-commit --all
+    follow = log --follow -p
+    l = log --graph --decorate --pretty=oneline --abbrev-commit --all
+    sl = shortlog
+
+    ls = ls-files
+    
+    # Show files ignored by git:
+    ign = ls-files -o -i --exclude-standard
+    meld = mergetool
+    web = instaweb
+
+    unstage = reset HEAD 
+    recommit = commit --all --amend --no-edit    
+
+    # Hopefully, pulling this way will prevent extraneous merge comments
+    pl = pull --ff-only
+
+    mt = mergetool
+    mergeo = merge -X ours
+    merget = merge -X theirs
+    abort = merge --abort
+
+    
+
+[branch]
+	autosetupmerge = true
+[branch "master"]
+	## Keep dev history in branches
+	mergeoptions = --no-ff
+
+[merge]
+    # Include the summary of merged commits into all newly created merge
+    # commits. The newly created merge commit will contain a one-line summary
+    # of every (well, most) merged commits.
+    log = true
+    # Show merge statistics after merge.
+    stat = true
+    #tool = diffuse
+	
+    
+#"tool = meld [merge]
+
+[merge]
+    tool = superDiffuse 
+[mergetool "superDiffuse"]
+	cmd = /usr/local/bin/superDiffuse $LOCAL $BASE $REMOTE $MERGED
+
+#   [merge]
+#    tool = diffuseBase 
+#[mergetool "diffuseBase"]
+#  	cmd = diffuse $LOCAL $BASE $REMOTE 
+
+# [merge]
+#     tool = meldBase 
+# [mergetool "meldBase"]
+# 	cmd = meld $LOCAL $BASE $REMOTE  
+
+	
+[credential]
+	helper = store
+[push]
+	default = simple
