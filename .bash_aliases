@@ -1,5 +1,5 @@
 
-PS1='($HOSTNAME \w)\$ '
+PS1='[$HOSTNAME \w]\$ '
 
 # Global Aliases (set by Elliot)
 alias df='df -m'

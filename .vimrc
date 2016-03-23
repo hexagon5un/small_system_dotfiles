@@ -239,9 +239,9 @@ set splitbelow " When splitting horizontally, split below
 
 " Swap file is stupid
 "set noswapfile
-set backup
-set backupdir=/home/elliot/.vimtmp
-"set dir=/home/elliot/.vimtmp
+" set backup
+" set backupdir=/home/elliot/.vimtmp
+" set dir=/home/elliot/.vimtmp
 
 "pathogen path manager
 " execute pathogen#infect()
