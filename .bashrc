@@ -74,7 +74,7 @@ esac
 if [ -x /usr/bin/dircolors ]; then
     #test -r ~/.dircolors && eval "$(dircolors -b)"
     #eval `cat ~/.dircolors`
-    eval `dircolors -b /home/elliot/.dircolors_d/dircolors-solarized/dircolors.256dark`
+    #eval `dircolors -b /home/elliot/.dircolors_d/dircolors-solarized/dircolors.256dark`
     alias ls='ls --color=auto'
     alias grep='grep --color=auto'
     alias fgrep='fgrep --color=auto'
